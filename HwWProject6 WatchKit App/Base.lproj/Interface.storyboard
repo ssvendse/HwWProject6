@@ -1,14 +1,40 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="HwWProject6_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Dictation" id="rnE-tK-xZm">
+                            <connections>
+                                <action selector="dictateTapped" destination="AgC-eL-Hgc" id="2Ue-J9-6K9"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Multi Input" id="raL-pV-y8U">
+                            <connections>
+                                <action selector="multiInputTapped" destination="AgC-eL-Hgc" id="vGE-GH-DPG"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Recording" id="Tck-jh-00l">
+                            <connections>
+                                <action selector="recordingTapped" destination="AgC-eL-Hgc" id="49X-bL-j6K"/>
+                            </connections>
+                        </button>
+                        <imageView alignment="left" id="Gu3-RK-S0K"/>
+                    </items>
+                    <connections>
+                        <outlet property="image" destination="Gu3-RK-S0K" id="dic-BZ-8q1"/>
+                    </connections>
+                </controller>
             </objects>
         </scene>
     </scenes>
